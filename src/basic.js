@@ -1,5 +1,6 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
+import { StringOutputParser } from "@langchain/core/output_parsers";
 
 // initialize your llm model
 const llm = new ChatOpenAI({
@@ -17,14 +18,17 @@ const prompt = ChatPromptTemplate.fromMessages([
   ["human", "{topic}"],
 ]);
 
+// define your output parser
+const outputParser = new StringOutputParser();
+
 (async () => {
   // Now we will create a basic chain, it will combine the prompt with the llm model
   // We will use LangChain LCEL syntax to create the chain, pipe method will be used to create the chain
   // prompt -> llm model -> response
-  const chain = prompt.pipe(llm);
+  const chain = prompt.pipe(llm).pipe(outputParser);
 
   // Please keep in mind that, the name of your key in the invoke method should be same
   // as you use in the prompt within {} braces.
   const response = await chain.invoke({ topic: "Docker" });
-  console.log(response.content);
+  console.log(response);
 })();
