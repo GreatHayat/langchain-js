@@ -1,0 +1,16 @@
+{
+  "name": "langchain-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Muhammad Khizar Hayat",
+  "license": "ISC",
+  "description": "Exploring LangChain with JavaScript",
+  "dependencies": {
+    "@langchain/openai": "^0.0.31"
+  }
+}
