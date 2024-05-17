@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "basic": "node --env-file=.env src/basic.js",
-    "retrievalChain": "node --env-file=.env src/retrievalChain.js"
+    "retrievalChain": "node --env-file=.env src/retrievalChain.js",
+    "lcelRag": "node --env-file=.env src/lcelRag.js"
   },
   "type": "module",
   "keywords": [],
