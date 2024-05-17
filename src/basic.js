@@ -29,6 +29,6 @@ const outputParser = new StringOutputParser();
 
   // Please keep in mind that, the name of your key in the invoke method should be same
   // as you use in the prompt within {} braces.
-  const response = await chain.invoke({ topic: "Docker" });
+  const response = await chain.invoke({ topic: "AWS S3" });
   console.log(response);
 })();
