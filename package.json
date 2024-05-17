@@ -12,6 +12,7 @@
   "description": "Exploring LangChain with JavaScript",
   "dependencies": {
     "@langchain/core": "^0.1.63",
-    "@langchain/openai": "^0.0.31"
+    "@langchain/openai": "^0.0.31",
+    "@langchain/qdrant": "^0.0.3"
   }
 }
